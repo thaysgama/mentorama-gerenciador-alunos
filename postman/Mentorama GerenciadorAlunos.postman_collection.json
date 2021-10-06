@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "1d021144-2282-4451-8870-22e1837dbf55",
+		"name": "Mentorama GerenciadorAlunos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/gerenciadoralunos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciadoralunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por Nome e/ou Idade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/gerenciadoralunos?nome=Thays&idade=29",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciadoralunos"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Thays"
+						},
+						{
+							"key": "idade",
+							"value": "29"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Aluno por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/gerenciadoralunos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciadoralunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Thays\",\r\n    \"idade\": 29\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/gerenciadoralunos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciadoralunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Cadastro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Joaquina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/gerenciadoralunos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciadoralunos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/gerenciadoralunos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciadoralunos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentacao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v3/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
